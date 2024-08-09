@@ -6,7 +6,7 @@ const Navbar = () => (
   <nav className="bg-blue-500 p-4 flex items-center justify-between">
     <div className="flex items-center">
       <img src={Logo} alt="Logo" className="h-10 w-10 mr-4" />
-      <ul className="flex space-x-6">
+      <ul className="menu menu-horizontal px-1">
         <li><Link className="text-white hover:text-gray-200" to="/">Home</Link></li>
         <li><Link className="text-white hover:text-gray-200" to="/contact-us">Contact Us</Link></li>
         <li><Link className="text-white hover:text-gray-200" to="/about">About</Link></li>
