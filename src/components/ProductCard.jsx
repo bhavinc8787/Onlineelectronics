@@ -17,19 +17,23 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="flex-shrink-0 border rounded-lg p-4 w-64 card bg-base-100 shadow-2xl skeleton">
-      <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded-lg" />
+    <div className="flex-shrink-0 border rounded-lg p-6 w-80 card bg-base-100 shadow-2xl">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-full h-60 object-cover mb-4 rounded-lg"
+      />
       <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
       <p className="text-gray-600 mb-2">Company: {product.company}</p>
       <p className="text-gray-600 mb-4">Price: ₹{product.price}</p>
-      <div className="flex justify-between ">
-        <button 
+      <div className="flex justify-between space-x-2">
+        <button
           onClick={handleAddToCart}
           className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
         >
           Add to Cart
         </button>
-        <button 
+        <button
           onClick={handleBuyNow}
           className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
         >

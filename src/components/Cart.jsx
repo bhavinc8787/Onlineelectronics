@@ -11,18 +11,28 @@ const Cart = () => {
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
-        <ul className="list-disc pl-5 mb-4">
-          {cartItems.map(item => (
-            <li key={item.id} className="mb-2">
-              {item.name} - ₹{item.price}
-            </li>
-          ))}
-        </ul>
-      )}
-      {cartItems.length > 0 && (
-        <Link to="/payment" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-          Proceed to Payment
-        </Link>
+        <div className="space-y-4">
+          <div className="bg-white border rounded-lg shadow-md p-4">
+            <h2 className="text-xl font-semibold mb-4">Cart Details</h2>
+            <ul className="list-disc pl-5 mb-4">
+              {cartItems.map(item => (
+                <li key={item.id} className="mb-2 flex items-center justify-between">
+                  <span>{item.name}</span>
+                  <span>₹{item.price}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-between items-center mt-4">
+              <span className="font-semibold">Total:</span>
+              <span className="text-xl font-bold">
+                ₹{cartItems.reduce((total, item) => total + item.price, 0)}
+              </span>
+            </div>
+          </div>
+          <Link to="/payment" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+            Proceed to Payment
+          </Link>
+        </div>
       )}
     </div>
   );
