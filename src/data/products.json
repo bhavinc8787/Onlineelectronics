@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "name": "Air Conditioner",
+    "company": "CoolAir",
+    "price": 30000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Washing Machine",
+    "company": "WashMaster",
+    "price": 25000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 3,
+    "name": "Refrigerator",
+    "company": "CoolTech",
+    "price": 40000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 4,
+    "name": "Microwave Oven",
+    "company": "QuickCook",
+    "price": 12000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-oven.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Television 42 inch",
+    "company": "VisionPlus",
+    "price": 45000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 6,
+    "name": "Television 50 inch",
+    "company": "UltraView",
+    "price": 60000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 7,
+    "name": "Washing Machine 7 kg",
+    "company": "SpinMaster",
+    "price": 22000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 8,
+    "name": "Washing Machine 8 kg",
+    "company": "WashPro",
+    "price": 27000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 9,
+    "name": "Air Conditioner 1.5 Ton",
+    "company": "CoolBreeze",
+    "price": 35000,
+    "category": "AC",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 10,
+    "name": "Air Conditioner 2 Ton",
+    "company": "FreshAir",
+    "price": 40000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-2ton.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Refrigerator 300 L",
+    "company": "Frosty",
+    "price": 35000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 12,
+    "name": "Refrigerator 500 L",
+    "company": "ColdStorage",
+    "price": 50000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 13,
+    "name": "Microwave Oven 20L",
+    "company": "SpeedyCook",
+    "price": 10000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-20l.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Microwave Oven 30L",
+    "company": "HeatMaster",
+    "price": 14000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-30l.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Television 32 inch",
+    "company": "ClearView",
+    "price": 35000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 16,
+    "name": "Television 55 inch",
+    "company": "SuperVision",
+    "price": 75000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 17,
+    "name": "Washing Machine 6 kg",
+    "company": "EcoWash",
+    "price": 20000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 18,
+    "name": "Washing Machine 9 kg",
+    "company": "CleanTech",
+    "price": 29000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 19,
+    "name": "Air Conditioner 1 Ton",
+    "company": "BreezeCool",
+    "price": 32000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-1ton.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Air Conditioner 1.8 Ton",
+    "company": "PureAir",
+    "price": 37000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-1.8ton.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Refrigerator 400 L",
+    "company": "ArcticCool",
+    "price": 40000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 22,
+    "name": "Refrigerator 600 L",
+    "company": "IceBox",
+    "price": 55000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 23,
+    "name": "Microwave Oven 25L",
+    "company": "CookMaster",
+    "price": 11000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-25l.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Microwave Oven 35L",
+    "company": "QuickHeat",
+    "price": 15000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-35l.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Television 40 inch",
+    "company": "HDView",
+    "price": 50000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 26,
+    "name": "Television 60 inch",
+    "company": "MaxView",
+    "price": 90000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 27,
+    "name": "Washing Machine 7.5 kg",
+    "company": "TurboWash",
+    "price": 23000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 28,
+    "name": "Washing Machine 8.5 kg",
+    "company": "SuperClean",
+    "price": 28000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 29,
+    "name": "Air Conditioner 1.2 Ton",
+    "company": "CoolAirPro",
+    "price": 34000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-1.2ton.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Air Conditioner 2.5 Ton",
+    "company": "EliteAir",
+    "price": 42000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-2.5ton.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Refrigerator 350 L",
+    "company": "CoolMaster",
+    "price": 37000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 32,
+    "name": "Refrigerator 550 L",
+    "company": "FreezeTech",
+    "price": 52000,
+    "category": "Refrigerator",
+    "image": "https://img.freepik.com/free-photo/retro-refrigerator-indoors_23-2150711916.jpg?t=st=1723214606~exp=1723218206~hmac=06b7d0528d0d11ebc71a3495604cc448e23f11684e555e35dddcc3fa0176c743&w=360"
+  },
+  {
+    "id": 33,
+    "name": "Microwave Oven 22L",
+    "company": "HeatWave",
+    "price": 9000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-22l.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Microwave Oven 28L",
+    "company": "CookFast",
+    "price": 13000,
+    "category": "Microwave",
+    "image": "https://example.com/microwave-28l.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Television 45 inch",
+    "company": "SmartVision",
+    "price": 55000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 36,
+    "name": "Television 65 inch",
+    "company": "MegaView",
+    "price": 95000,
+    "category": "TV",
+    "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 37,
+    "name": "Washing Machine 6.5 kg",
+    "company": "EcoClean",
+    "price": 21000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 38,
+    "name": "Washing Machine 9.5 kg",
+    "company": "CleanMaster",
+    "price": 30000,
+    "category": "Washing Machine",
+    "image": "https://img.freepik.com/free-vector/washing-machine-illustration-with-bubbles_1284-52326.jpg?w=740&t=st=1723213860~exp=1723214460~hmac=d484b343b1582b8d10bd6a386a5678fe052bac124350a6175e53ad9a28bef084"
+  },
+  {
+    "id": 39,
+    "name": "Air Conditioner 1.3 Ton",
+    "company": "BreezePro",
+    "price": 33000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-1.3ton.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Air Conditioner 3 Ton",
+    "company": "FreshBreeze",
+    "price": 45000,
+    "category": "AC",
+    "image": "https://example.com/air-conditioner-3ton.jpg"
+  }
+]
