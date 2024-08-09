@@ -16,7 +16,7 @@ const About = () => (
       <h2 className="text-2xl font-semibold mb-4">Meet Our Team</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="bg-white shadow-md rounded-lg p-4">
-          <img src="https://via.placeholder.com/150" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">John Doe</h3>
           <p className="text-gray-600">Founder & CEO</p>
           <p className="mt-2">
@@ -24,7 +24,7 @@ const About = () => (
           </p>
         </div>
         <div className="bg-white shadow-md rounded-lg p-4">
-          <img src="https://via.placeholder.com/150" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Jane Smith</h3>
           <p className="text-gray-600">Chief Technology Officer</p>
           <p className="mt-2">
@@ -32,7 +32,7 @@ const About = () => (
           </p>
         </div>
         <div className="bg-white shadow-md rounded-lg p-4">
-          <img src="https://via.placeholder.com/150" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Emily Johnson</h3>
           <p className="text-gray-600">Head of Customer Service</p>
           <p className="mt-2">

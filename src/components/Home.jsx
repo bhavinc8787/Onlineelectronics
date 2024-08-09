@@ -19,7 +19,9 @@ const Home = () => {
       <ProductSection category="TV" products={products} />
       <ProductSection category="Washing Machine" products={products} />
     
+    
     </div>
+
   );
 };
 
