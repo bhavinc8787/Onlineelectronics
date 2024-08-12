@@ -16,4 +16,5 @@ const ProductSection = ({ category, products }) => {
   );
 };
 
+
 export default ProductSection;
