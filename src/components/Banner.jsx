@@ -43,7 +43,7 @@ function Banner() {
               src={src}
               alt={`Slide ${index + 1}`}
               className="w-full flex-shrink-0 object-cover"
-              style={{ minHeight: '300px' }} // Adjust the height as needed
+              style={{ minHeight: '300px' }} 
             />
           ))}
         </div>
