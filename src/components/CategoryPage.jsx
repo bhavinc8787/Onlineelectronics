@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductCard from './ProductCard';
@@ -14,12 +13,15 @@ const CategoryPage = () => {
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-6">{category}s</h1>
-      <div className="grid grid-cols-1 gap-y-6">
-        {products.map((product, index) => (
-          <div key={product.id} className={`flex justify-${index % 2 === 0 ? 'end' : 'start'} mb-6`}>
-            <ProductCard product={product} />
-          </div>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
+        <span className="bg-slate-300 rounded-lg px-4 py-2 inline-block">
+          {category}s
+        </span>
+      </h1>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
