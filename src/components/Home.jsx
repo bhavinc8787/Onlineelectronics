@@ -1,57 +1,127 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Banner from './Banner';
+import Footer from './Footer';
+import productsData from '../data/products.json';
+import About from './About';
 
-const images = [
-  'https://img.freepik.com/free-psd/isolated-modern-laptop_23-2150629066.jpg?t=st=1723462556~exp=1723466156~hmac=b98bc326b3785e4016ffccee31bb9832185fe374cda49bbc0aa7cf5b89cfafa3&w=740',
-  'https://img.freepik.com/free-vector/refrigerator-with-lots-food_1308-105555.jpg?t=st=1723462726~exp=1723466326~hmac=01fba9eb6569065e4964df7642fa07d5b951aa1fc4b844b585522d8ad12c5535&w=740',
-  "https://img.freepik.com/free-vector/climate-control-equipment-realistic-set-with-air-conditioning-symbols-isolated-illustration_1284-29133.jpg?t=st=1723491613~exp=1723495213~hmac=ce8f4421258a178deeda3db993e3f37954c6b6678856f646761142fde5e01c10&w=740"
-];
+const Home = () => {
+  const navigate = useNavigate();
 
-function Banner() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef(null);
-
-  useEffect(() => {
-
-    intervalRef.current = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 6000); 
-
-   
-    return () => clearInterval(intervalRef.current);
-  }, []);
+  const handleCategoryClick = (category) => {
+    navigate(`/category/${category}`);
+  };
 
   return (
-    <div className="bg-white text-gray-900 max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
-      <div className="w-full md:w-1/2 mt-12 md:mt-32 order-2 md:order-1">
-        <div className="space-y-12">
-          <h1 className="text-4xl font-bold">
-            Welcome to Our Electronics Store!
-            <span className="text-pink-600"> Discover the Latest Gadgets and Deals!</span>
-          </h1>
-          <p className="text-xl font-semibold">
-            Explore our wide range of electronics and find the latest gadgets and technology at unbeatable prices. Shop now and stay ahead with the best in tech!
-          </p>
-        </div>
-      </div>
-      <div className="w-full md:w-1/2 order-1 overflow-hidden relative">
-        <div
-          className="flex transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+    <div className="p-8">
+      <Banner />
+      <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
+        <span className="bg-slate-300 rounded-lg px-4 py-2 inline-block">
+          Discover a World of Electronics
+        </span>
+      </h1>
+
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-6 justify-items-center mt-14">
+        {/* Category Card for Refrigerators */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('Refrigerator')}
         >
-          {images.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Slide ${index + 1}`}
-              className="w-full flex-shrink-0 object-cover"
-              style={{ minHeight: '300px' }} 
-            />
-          ))}
+          <img
+            src="https://img.freepik.com/free-photo/side-view-woman-looking-fridge_23-2149857561.jpg?t=st=1723471365~exp=1723474965~hmac=3f119627373b3761406a04f7424a70eb65b9b337aeb5ddbfa1df345f0c070510&w=900"
+            alt="Refrigerator"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">Refrigerators</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            78% Off
+          </div>
         </div>
-        
+
+        {/* Category Card for TVs */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('TV')}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/man-watching-streaming-service-his-tv_23-2149047410.jpg?t=st=1723473087~exp=1723476687~hmac=0fdc959ff295cd227a25b6d40a3c612f6142e9ee0ce57fd0142b43ae0f3eccdb&w=996"
+            alt="TV"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">TVs</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            50% Off
+          </div>
+        </div>
+
+        {/* Category Card for Laptops */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('Laptop')}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/view-3d-laptop-device-with-screen-keyboard_23-2150714005.jpg?t=st=1723473413~exp=1723477013~hmac=bad6b3b640f66a680680874e05f4f59d570ec97b9f9ede6f6e55a7038b84aba4&w=740"
+            alt="Laptop"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">Laptops</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            60% Off
+          </div>
+        </div>
+
+        {/* Category Card for Air Conditioners */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('AC')}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/young-woman-using-home-technology_23-2149216632.jpg?t=st=1723474081~exp=1723477681~hmac=fe6593204cc1add41118f9172218071459d5d7b4e06cd0d88ed25dfd27dc1821&w=996"
+            alt="AC"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">Air Conditioners</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            60% Off
+          </div>
+        </div>
+
+        {/* Category Card for Washing Machines */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('Washing Machine')}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/woman-taking-clothes-from-washing-machine_23-2149117037.jpg?t=st=1723474193~exp=1723477793~hmac=ee11769aa4ab252d6feb7558ce23eda70bbda7088fa65e18267c89c6e095c885&w=996"
+            alt="Washing Machine"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">Washing Machines</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            35% Off
+          </div>
+        </div>
+
+        {/* Category Card for Microwaves */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('Microwave')}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/view-modern-air-fryer-with-food_23-2151737049.jpg?t=st=1723489613~exp=1723493213~hmac=b247550ba2e3e4e3c230c37264e86de1c948988f6609e75078f3818e7f1db5ff&w=826"
+            alt="Microwave"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">Microwaves</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            65% Off
+          </div>
+        </div>
       </div>
+
+      <About />
     </div>
   );
-}
+};
 
-export default Banner;
+export default Home;
