@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const images = [
   'https://img.freepik.com/free-psd/isolated-modern-laptop_23-2150629066.jpg?t=st=1723462556~exp=1723466156~hmac=b98bc326b3785e4016ffccee31bb9832185fe374cda49bbc0aa7cf5b89cfafa3&w=740',
-  'https://img.freepik.com/free-vector/refrigerator-with-lots-food_1308-105555.jpg?t=st=1723462726~exp=1723466326~hmac=01fba9eb6569065e4964df7642fa07d5b951aa1fc4b844b585522d8ad12c5535&w=740'
+  'https://img.freepik.com/free-vector/refrigerator-with-lots-food_1308-105555.jpg?t=st=1723462726~exp=1723466326~hmac=01fba9eb6569065e4964df7642fa07d5b951aa1fc4b844b585522d8ad12c5535&w=740',
+  "https://img.freepik.com/free-vector/climate-control-equipment-realistic-set-with-air-conditioning-symbols-isolated-illustration_1284-29133.jpg?t=st=1723491613~exp=1723495213~hmac=ce8f4421258a178deeda3db993e3f37954c6b6678856f646761142fde5e01c10&w=740"
 ];
 
 function Banner() {
