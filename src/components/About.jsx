@@ -19,7 +19,7 @@ const About = () => (
         <div className="text-center lg:text-left lg:ml-8">
           <h1 className="text-xl sm:text-2xl font-bold">Our Company</h1>
           <p className="mb-4 mt-4 sm:mt-8">
-            Welcome to Electronics Store, your one-stop destination for the latest in electronics and gadgets. Since 1992, our mission is to provide high-quality products and exceptional customer service. We believe in innovation, reliability, and building lasting relationships with our customers.
+            Welcome to ElectroCore, your one-stop destination for the latest in electronics and gadgets. Since 1992, our mission is to provide high-quality products and exceptional customer service. We believe in innovation, reliability, and building lasting relationships with our customers.
           </p>
           <p className="mb-4">
             Our journey began with a simple idea: to make cutting-edge technology accessible to everyone. Over the years, we have grown from a small startup to a leading player in the electronics market, thanks to our dedicated team and the support of our loyal customers.
