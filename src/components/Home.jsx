@@ -14,18 +14,17 @@ const Home = () => {
 
   return (
     <div className="p-8">
-      <Banner /> 
-      <h1 className="text-2xl lg:text-3xl lg: font-bold mb-6 text-center">
-  <span className="bg-slate-300 rounded-lg px-4 py-2 inline-block">
-    Discover a World of Electronics
-  </span>
-</h1>
+      <Banner />
+      <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
+        <span className="bg-slate-300 rounded-lg px-4 py-2 inline-block">
+          Discover a World of Electronics
+        </span>
+      </h1>
 
-   
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8 justify-items-center mt-14">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-6 justify-items-center mt-14">
         {/* Category Card for Refrigerators */}
         <div 
-          className="relative w-full max-w-md h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => handleCategoryClick('Refrigerator')}
         >
           <img
@@ -41,7 +40,7 @@ const Home = () => {
 
         {/* Category Card for TVs */}
         <div 
-          className="relative w-full max-w-md h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => handleCategoryClick('TV')}
         >
           <img
@@ -57,7 +56,7 @@ const Home = () => {
 
         {/* Category Card for Laptops */}
         <div 
-          className="relative w-full max-w-md h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => handleCategoryClick('Laptop')}
         >
           <img
@@ -71,9 +70,9 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Example Card for Air Conditioners */}
+        {/* Category Card for Air Conditioners */}
         <div 
-          className="relative w-full max-w-md h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => handleCategoryClick('AC')}
         >
           <img
@@ -87,9 +86,9 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Example Card for Washing Machines */}
+        {/* Category Card for Washing Machines */}
         <div 
-          className="relative w-full max-w-md h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => handleCategoryClick('Washing Machine')}
         >
           <img
@@ -102,10 +101,25 @@ const Home = () => {
             35% Off
           </div>
         </div>
-      </div>
-    
-      <About/>
 
+        {/* Category Card for Microwaves */}
+        <div 
+          className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => handleCategoryClick('Microwave')}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/view-modern-air-fryer-with-food_23-2151737049.jpg?t=st=1723489613~exp=1723493213~hmac=b247550ba2e3e4e3c230c37264e86de1c948988f6609e75078f3818e7f1db5ff&w=826"
+            alt="Microwave"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 text-xl font-bold text-white">Microwaves</div>
+          <div className="absolute bottom-2 right-2 bg-red-600 text-white py-1 px-3 text-sm font-bold rounded-full">
+            65% Off
+          </div>
+        </div>
+      </div>
+
+      <About />
     </div>
   );
 };
