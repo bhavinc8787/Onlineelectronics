@@ -6,24 +6,27 @@ import ContactUs from './components/ContactUs';
 import About from './components/About';
 import Cart from './components/Cart';
 import Payment from './components/Payment';
- // Import the Banner component
-import Footer from './components/Footer'; // Import the Footer component
+
+import Footer from './components/Footer'; 
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import CategoryPage from './components/CategoryPage';
+
 
 const App = () => (
   <Provider store={store}>
     <Router>
       <Navbar />
-      {/* Add Banner here if you want it on every page */}
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
-      <Footer /> {/* Add Footer here */}
+      <Footer /> 
     </Router>
   </Provider>
 );
