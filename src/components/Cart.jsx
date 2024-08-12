@@ -17,15 +17,15 @@ const Cart = () => {
             <ul className="list-disc pl-5 mb-4">
               {cartItems.map(item => (
                 <li key={item.id} className="mb-2 flex items-center justify-between">
-                  <span>{item.name}</span>
-                  <span>₹{item.price}</span>
+                  <span>{item.name} (x{item.quantity})</span>
+                  <span>₹{item.price * item.quantity}</span>
                 </li>
               ))}
             </ul>
             <div className="flex justify-between items-center mt-4">
               <span className="font-semibold">Total:</span>
               <span className="text-xl font-bold">
-                ₹{cartItems.reduce((total, item) => total + item.price, 0)}
+                ₹{cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}
               </span>
             </div>
           </div>
