@@ -21,7 +21,7 @@ const Home = () => {
         </span>
       </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-6 justify-items-center mt-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-6 justify-items-center mt-14">
         {/* Category Card for Refrigerators */}
         <div 
           className="relative w-full h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
