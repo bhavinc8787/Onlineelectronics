@@ -9,7 +9,7 @@ const Payment = () => {
   const handlePayment = (item) => {
     setTimeout(() => {
       alert(`Payment successful for ${item.name}!\nPrice: ₹${item.price}`);
-      // Optionally, you can also dispatch an action to remove the item from the cart here
+      
     }, 1000);
   };
 
