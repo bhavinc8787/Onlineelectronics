@@ -166,5 +166,37 @@
     "price": 90000,
     "category": "TV",
     "image": "https://img.freepik.com/free-vector/realistic-television-design_1053-473.jpg?t=st=1723215009~exp=1723218609~hmac=282005ef747bb1fd2c6a58c7b88e5f9ab8d7af29abb34863cb4423652674e33c&w=740"
+  },
+  {
+    "id": 22,
+    "name": "Laptop 14 inch",
+    "company": "VisionPlus",
+    "price": 45000,
+    "category": "Laptop",
+    "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 23,
+    "name": "Laptop 15 inch",
+    "company": "UltraView",
+    "price": 60000,
+    "category": "Laptop",
+    "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 24,
+    "name": "Laptop 17 inch",
+    "company": "SuperVision",
+    "price": 75000,
+    "category": "Laptop",
+    "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": 25,
+    "name": "Laptop 19 inch",
+    "company": "MegaView",
+    "price": 90000,
+    "category": "Laptop",
+    "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ]
