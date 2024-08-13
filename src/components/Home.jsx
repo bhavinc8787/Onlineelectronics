@@ -44,7 +44,7 @@ const Home = () => {
           onClick={() => handleCategoryClick('TV')}
         >
           <img
-            src="https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://img.freepik.com/free-photo/man-watching-streaming-service-his-tv_23-2149047410.jpg?t=st=1723473087~exp=1723476687~hmac=0fdc959ff295cd227a25b6d40a3c612f6142e9ee0ce57fd0142b43ae0f3eccdb&w=996"
             alt="TV"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -92,7 +92,7 @@ const Home = () => {
           onClick={() => handleCategoryClick('Washing Machine')}
         >
           <img
-            src="https://images.pexels.com/photos/5591460/pexels-photo-5591460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://img.freepik.com/free-photo/woman-taking-clothes-from-washing-machine_23-2149117037.jpg?t=st=1723474193~exp=1723477793~hmac=ee11769aa4ab252d6feb7558ce23eda70bbda7088fa65e18267c89c6e095c885&w=996"
             alt="Washing Machine"
             className="absolute inset-0 w-full h-full object-cover"
           />
