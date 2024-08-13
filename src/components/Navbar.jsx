@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
   const cartItems = useSelector(state => state.cart);
 
-  // Calculate the total number of items in the cart
+
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
