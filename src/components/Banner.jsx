@@ -11,12 +11,10 @@ function Banner() {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-
     intervalRef.current = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
     }, 6000); 
 
-   
     return () => clearInterval(intervalRef.current);
   }, []);
 
@@ -48,7 +46,14 @@ function Banner() {
             />
           ))}
         </div>
-        
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-pink-600' : 'bg-gray-400'}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
