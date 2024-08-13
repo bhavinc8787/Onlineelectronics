@@ -1,16 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { removeFromCart } from '../redux/actions'; 
 
 const Payment = () => {
   const cart = useSelector(state => state.cart);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handlePayment = (item) => {
     setTimeout(() => {
       alert(`Payment successful for ${item.name}!\nPrice: ₹${item.price}`);
-      
     }, 1000);
+  };
+
+  const handleRemove = (itemId) => {
+    dispatch(removeFromCart(itemId));
   };
 
   return (
@@ -23,17 +28,25 @@ const Payment = () => {
               <h2 className="text-xl font-semibold">{item.name}</h2>
               <p className="text-gray-600">Price: ₹{item.price}</p>
             </div>
-            <button 
-              onClick={() => handlePayment(item)} 
-              className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
-            >
-              Pay
-            </button>
+            <div className="flex space-x-2">
+              <button
+                onClick={() => handlePayment(item)}
+                className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+              >
+                Pay
+              </button>
+              <button
+                onClick={() => handleRemove(item.id)}
+                className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
+              >
+                Remove
+              </button>
+            </div>
           </div>
         ))}
       </div>
-      <button 
-        onClick={() => navigate('/')} 
+      <button
+        onClick={() => navigate('/')}
         className="mt-4 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
       >
         Back to Home
