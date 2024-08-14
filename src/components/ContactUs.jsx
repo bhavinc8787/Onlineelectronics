@@ -86,7 +86,7 @@ const ContactUs = () => {
             type="submit"
             className="flex-1 py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200"
           >
-            <img src="email-icon.png" alt="Email" className="inline mr-2" />
+            <img src="https://img.icons8.com/?size=100&id=53388&format=png&color=000000" alt="Email" className="inline mr-2" />
             Send Email
           </button>
           <button
