@@ -29,7 +29,12 @@ const ContactUs = () => {
   };
 
   const handleWhatsAppRedirect = () => {
-    const message = `Name: ${formData.name}\nEmail: ${formData.email}\nContact Number: ${formData.contactNumber}`;
+    if (!formData.name || !formData.email || !formData.contactNumber) {
+      setMessage('Please fill out all fields.');
+      return;
+    }
+
+    const message = `Hello, I am ${formData.name}. I want to connect with you, so I am sharing my contact details:\nContact Number: ${formData.contactNumber}\nEmail: ${formData.email}`;
     const phoneNumber = '919075688958'; // +91 followed by your number without spaces
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -51,6 +56,7 @@ const ContactUs = () => {
             onChange={handleChange}
             required
             className="border border-gray-300 p-3 rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-400"
+            aria-required="true"
           />
         </div>
         <div>
@@ -65,6 +71,7 @@ const ContactUs = () => {
             onChange={handleChange}
             required
             className="border border-gray-300 p-3 rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-400"
+            aria-required="true"
           />
         </div>
         <div>
@@ -79,22 +86,23 @@ const ContactUs = () => {
             onChange={handleChange}
             required
             className="border border-gray-300 p-3 rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-400"
+            aria-required="true"
           />
         </div>
         <div className="flex gap-4">
           <button
             type="submit"
-            className="flex-1 py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200"
+            className="flex-1 py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200 flex items-center justify-center"
           >
-            <img src="https://img.icons8.com/?size=100&id=53388&format=png&color=000000" alt="Email" className="inline mr-2" />
+            <img src="https://img.icons8.com/?size=50&id=53388&format=png&color=000000" alt="Email" className="mr-2" />
             Send Email
           </button>
           <button
             type="button"
             onClick={handleWhatsAppRedirect}
-            className="flex-1 py-3 px-4 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-200"
+            className="flex-1 py-3 px-4 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-200 flex items-center justify-center"
           >
-            <img src="https://img.icons8.com/?size=100&id=16712&format=png&color=000000" alt="WhatsApp" className="inline mr-2" />
+            <img src="https://img.icons8.com/?size=50&id=16712&format=png&color=000000" alt="WhatsApp" className="mr-2" />
             Send via WhatsApp
           </button>
         </div>
