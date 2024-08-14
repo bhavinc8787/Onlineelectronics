@@ -95,7 +95,7 @@ const ContactUs = () => {
             className="flex-1 py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200 flex items-center justify-center"
           >
             <img src="https://img.icons8.com/?size=50&id=53388&format=png&color=000000" alt="Email" className="mr-2" />
-            Send Email
+             Email
           </button>
           <button
             type="button"
@@ -103,7 +103,7 @@ const ContactUs = () => {
             className="flex-1 py-3 px-4 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-200 flex items-center justify-center"
           >
             <img src="https://img.icons8.com/?size=50&id=16712&format=png&color=000000" alt="WhatsApp" className="mr-2" />
-            Send via WhatsApp
+             WhatsApp
           </button>
         </div>
       </form>
