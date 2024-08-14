@@ -35,7 +35,7 @@ const ContactUs = () => {
     }
 
     const message = `Hello, I am ${formData.name}. I want to connect with you, so I am sharing my contact details:\nContact Number: ${formData.contactNumber}\nEmail: ${formData.email}`;
-    const phoneNumber = '919075688958'; // +91 followed by your number without spaces
+    const phoneNumber = '919075688958'; 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
