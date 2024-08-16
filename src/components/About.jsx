@@ -13,17 +13,18 @@ const About = () => (
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 flex flex-col lg:flex-row items-center lg:items-start">
         <img
           src="https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          className="max-w-xs lg:max-w-sm rounded-lg shadow-2xl mb-6 lg:mb-0"
+          className="max-w-xs lg:max-w-sm rounded-lg shadow-2xl mb-6 lg:mb-0 mt-10"
           alt="Company"
         />
         <div className="text-center lg:text-left lg:ml-8">
           <h1 className="text-xl sm:text-2xl font-bold">Our Company</h1>
-          <p className="mb-4 mt-4 sm:mt-8">
-            Welcome to Electronics Store, your one-stop destination for the latest in electronics and gadgets. Since 1992, our mission is to provide high-quality products and exceptional customer service. We believe in innovation, reliability, and building lasting relationships with our customers.
+          <p className="mb-4 mt-2 sm:mt-8">
+            Welcome to Electronics Store, your trusted partner in delivering top-notch electronic solutions and services. Since 1992, we've been committed to offering not just the latest gadgets but also comprehensive support and expertise to ensure your technology needs are fully met.
           </p>
           <p className="mb-4">
-            Our journey began with a simple idea: to make cutting-edge technology accessible to everyone. Over the years, we have grown from a small startup to a leading player in the electronics market, thanks to our dedicated team and the support of our loyal customers.
+            Our journey started with a vision: to empower our customers with cutting-edge technology and exceptional service. From humble beginnings, we've evolved into a leading provider of electronic services, thanks to our expert team and the unwavering trust of our valued clients.
           </p>
+
           <Link className="btn btn-primary" to="/contact-us">
             Contact Us
           </Link>
