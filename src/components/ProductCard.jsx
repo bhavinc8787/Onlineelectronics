@@ -128,7 +128,7 @@ const ProductCard = ({ product }) => {
             onClick={handleBuyNow}
             className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
           >
-            Buy Now
+            Book Service Now !
           </button>
         </div>
       </div>
