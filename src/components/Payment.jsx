@@ -14,7 +14,7 @@ const Payment = () => {
   const [formData, setFormData] = useState({
     Name: '',
     Email: '',
-    Message: '',
+    Contact: '',
     Item: '',
     Price: '',
     Adress: '',
