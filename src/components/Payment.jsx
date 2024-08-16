@@ -54,7 +54,7 @@ const Payment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const sheetDbUrl = 'https://sheetdb.io/api/v1/4pv6nvarna0gf'; // Your actual SheetDB URL
+      const sheetDbUrl = 'https://sheetdb.io/api/v1/4pv6nvarna0gf';
 
       const response = await axios.post(sheetDbUrl, {
         data: formData
