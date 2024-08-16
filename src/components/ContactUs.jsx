@@ -1,210 +1,115 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import Modal from 'react-modal';
-import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { removeFromCart } from '../redux/actions';
+import emailjs from 'emailjs-com';
 
-Modal.setAppElement('#root');
-
-const Payment = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [orderPlaced, setOrderPlaced] = useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+const ContactUs = () => {
   const [formData, setFormData] = useState({
-    Name: '',
-    Email: '',
-    Message: '',
-    Item: '',
-    Price: '',
-    Adress: '',
-    Payment: '',
+    name: '',
+    email: '',
+    contactNumber: '',
   });
 
-  const cart = useSelector(state => state.cart);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [message, setMessage] = useState('');
 
-  const handlePayment = (item) => {
-    setFormData(prevFormData => ({
-      ...prevFormData,
-      Item: item.name,
-      Price: item.price.toString()  // Ensure price is a string before sending to SheetDB
-    }));
-    setIsModalOpen(true);
-  };
-
-  const handleRemove = (itemId) => {
-    dispatch(removeFromCart(itemId));
-  };
-
-  const handleCloseMessage = () => {
-    setShowSuccessMessage(false);
-    setIsModalOpen(false);
-  };
-
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevFormData => ({
-      ...prevFormData,
-      [name]: value
-    }));
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleEmailSubmit = (e) => {
     e.preventDefault();
-    try {
-      const sheetDbUrl = 'https://sheetdb.io/api/v1/4pv6nvarna0gf'; // Your actual SheetDB URL
 
-      const response = await axios.post(sheetDbUrl, {
-        data: formData
+    emailjs.send('service_usjd53g', 'template_9aey5ji', formData, '1QTyWl9bCO8phmxy1')
+      .then((response) => {
+        setMessage('Soon will contact you.');
+        setFormData({ name: '', email: '', contactNumber: '' });
+      })
+      .catch((error) => {
+        setMessage('Something went wrong, please try again.');
       });
-      console.log('Response:', response.data);
-      setShowSuccessMessage(true);
-      setOrderPlaced(true);
-    } catch (error) {
-      console.error('Error storing data:', error);
-      alert('There was an error booking the service. Please try again.');
+  };
+
+  const handleWhatsAppRedirect = () => {
+    if (!formData.name || !formData.email || !formData.contactNumber) {
+      setMessage('Please fill out all fields.');
+      return;
     }
+
+    const message = `Hello, I am ${formData.name}. I want to connect with you, so I am sharing my contact details:\nContact Number: ${formData.contactNumber}\nEmail: ${formData.email}`;
+    const phoneNumber = '919075688958'; 
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Payment Page</h1>
-      <div className="space-y-4">
-        {cart.map((item) => (
-          <div key={item.id} className="flex justify-between items-center border p-4 rounded-lg shadow-md">
-            <div>
-              <h2 className="text-xl font-semibold">{item.name}</h2>
-              <p className="text-gray-600">Price: ₹{item.price}</p>
-            </div>
-            <div className="flex space-x-2">
-              {!orderPlaced ? (
-                <>
-                  <button
-                    onClick={() => handlePayment(item)}
-                    className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
-                  >
-                    Book service now!
-                  </button>
-                  <button
-                    onClick={() => handleRemove(item.id)}
-                    className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
-                  >
-                    Remove
-                  </button>
-                </>
-              ) : (
-                <span className="bg-gray-500 text-white py-2 px-4 rounded">
-                  Order Placed
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-      <button
-        onClick={() => navigate('/')}
-        className="mt-4 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
-      >
-        Back to Home
-      </button>
-
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={() => setIsModalOpen(false)}
-        contentLabel="Booking Form"
-        className="fixed inset-0 flex items-center justify-center p-4"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
-      >
-        <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="Name"
-              value={formData.Name}
-              onChange={handleInputChange}
-              placeholder="Enter your name"
-              className="border p-2 rounded w-full mb-2"
-              required
-            />
-            <input
-              type="email"
-              name="Email"
-              value={formData.Email}
-              onChange={handleInputChange}
-              placeholder="Enter your email"
-              className="border p-2 rounded w-full mb-2"
-              required
-            />
-            <input
-              type="text"
-              name="Message"
-              value={formData.Message}
-              onChange={handleInputChange}
-              placeholder="Enter your contact number"
-              className="border p-2 rounded w-full mb-2"
-              required
-            />
-            <input
-              type="text"
-              name="Adress"
-              value={formData.Adress}
-              onChange={handleInputChange}
-              placeholder="Enter your address"
-              className="border p-2 rounded w-full mb-2"
-              required
-            />
-            <input
-              type="text"
-              name="Item"
-              value={formData.Item}
-              readOnly
-              className="border p-2 rounded w-full mb-2"
-            />
-            <input
-              type="text"
-              name="Price"
-              value={formData.Price}
-              readOnly
-              className="border p-2 rounded w-full mb-2"
-            />
-            <select
-              name="Payment"
-              value={formData.Payment}
-              onChange={handleInputChange}
-              className="border p-2 rounded w-full mb-2"
-              required
-            >
-              <option value="">Select Payment Method</option>
-              <option value="Pay After Service">Pay After Service</option>
-              <option value="Pay Now">Pay Now</option>
-            </select>
-
-            <button
-              type="submit"
-              className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 w-full mt-4"
-            >
-              Place Order
-            </button>
-          </form>
-
-          {showSuccessMessage && (
-            <div className="mt-4">
-              <p className="text-green-600 font-semibold">Thank You ... Successfully order placed</p>
-              <button
-                onClick={handleCloseMessage}
-                className="mt-2 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
-              >
-                Close
-              </button>
-            </div>
-          )}
+    <div className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Contact Us</h1>
+      <form onSubmit={handleEmailSubmit} className="space-y-6">
+        <div>
+          <label className="block text-sm font-semibold mb-2 text-gray-600" htmlFor="name">
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 p-3 rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-400"
+            aria-required="true"
+          />
         </div>
-      </Modal>
+        <div>
+          <label className="block text-sm font-semibold mb-2 text-gray-600" htmlFor="email">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 p-3 rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-400"
+            aria-required="true"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold mb-2 text-gray-600" htmlFor="contactNumber">
+            Contact Number
+          </label>
+          <input
+            id="contactNumber"
+            name="contactNumber"
+            type="text"
+            value={formData.contactNumber}
+            onChange={handleChange}
+            required
+            className="border border-gray-300 p-3 rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-400"
+            aria-required="true"
+          />
+        </div>
+        <div className="flex gap-4">
+          <button
+            type="submit"
+            className="flex-1 py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200 flex items-center justify-center"
+          >
+            <img src="https://img.icons8.com/?size=50&id=53388&format=png&color=000000" alt="Email" className="mr-2" />
+             Email
+          </button>
+          <button
+            type="button"
+            onClick={handleWhatsAppRedirect}
+            className="flex-1 py-3 px-4 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-200 flex items-center justify-center"
+          >
+            <img src="https://img.icons8.com/?size=50&id=16712&format=png&color=000000" alt="WhatsApp" className="mr-2" />
+             WhatsApp
+          </button>
+        </div>
+      </form>
+      {message && <p className="mt-4 text-center text-gray-700">{message}</p>}
     </div>
   );
 };
 
-export default Payment;
-  
+export default ContactUs;
