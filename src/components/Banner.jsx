@@ -24,11 +24,11 @@ function Banner() {
       <div className="w-full md:w-1/2 mt-12 md:mt-32 order-2 md:order-1">
         <div className="space-y-12">
           <h1 className="text-4xl font-bold">
-            Welcome to Our Electronics Store!
+            Welcome to Our Electronics Service Store!
             <span className="text-pink-600"> Discover the Latest Gadgets and Deals!</span>
           </h1>
           <p className="text-xl font-semibold">
-            Explore our wide range of electronics and find the latest gadgets and technology at unbeatable prices. Shop now and stay ahead with the best in tech!
+            Explore our wide range of electronic services and find the latest gadgets and technology at unbeatable prices.Get now and stay ahead with the best in tech!
           </p>
         </div>
       </div>
