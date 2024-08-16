@@ -29,7 +29,7 @@ const Payment = () => {
     setFormData(prevFormData => ({
       ...prevFormData,
       Item: item.name,
-      Price: item.price.toString()  // Ensure price is a string before sending to SheetDB
+      Price: item.price.toString() 
     }));
     setIsModalOpen(true);
   };
