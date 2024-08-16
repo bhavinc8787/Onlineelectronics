@@ -28,5 +28,5 @@ const CategoryPage = () => {
     </div>
   );
 };
-hi
+
 export default CategoryPage;
