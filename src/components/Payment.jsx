@@ -138,7 +138,7 @@ const Payment = () => {
               required
             />
             <input
-              type="text"
+              type="number"
               name="Contact"
               value={formData.Message}
               onChange={handleInputChange}
