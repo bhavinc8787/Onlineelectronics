@@ -18,7 +18,7 @@ const Navbar = () => {
             alt="ElectroCore Logo" 
             className="h-8 w-8 mr-2" 
           />
-          ElectroCore
+          ElectroCore Services
         </a>
       </div>
       <div className="flex-none">
