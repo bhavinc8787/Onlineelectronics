@@ -139,7 +139,7 @@ const Payment = () => {
             />
             <input
               type="text"
-              name="Message"
+              name="Contact"
               value={formData.Message}
               onChange={handleInputChange}
               placeholder="Enter your contact number"
