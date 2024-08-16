@@ -17,7 +17,7 @@ const Home = () => {
       <Banner />
       <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-center">
         <span className="bg-slate-300 rounded-lg px-4 py-2 inline-block">
-          Discover a World of Electronics
+          Discover a World of Electronic Services
         </span>
       </h1>
 
