@@ -140,7 +140,7 @@ const Payment = () => {
             <input
               type="number"
               name="Contact"
-              value={formData.Message}
+              value={formData.Contact}
               onChange={handleInputChange}
               placeholder="Enter your contact number"
               className="border p-2 rounded w-full mb-2"
